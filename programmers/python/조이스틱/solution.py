@@ -1,31 +1,3 @@
-def solution2(name):
-    answer = 0
-    arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T' 'U', 'V', 'W', 'X', 'Y', 'Z']
-    rarr = ['A', 'Z', 'Y', 'X', 'W', 'V', 'U', 'T', 'S', 'R', 'Q', 'P', 'O', 'N', 'M', 'L', 'K', 'J', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B']
-    buff1 = 0
-    buff2 = 0
-
-    
-    for v in name:
-        for ii, vv in enumerate(arr):
-            if v == vv:
-                buff1 = buff1 + ii
-
-        for ii, vv in enumerate(rarr):
-            if v == vv:
-                buff2 = buff2 + ii
-        if buff1 < buff2:
-            answer = answer + buff1
-        else:
-            answer = answer + buff2
-        
-        buff1 = 0
-        buff2 = 0
-
-    
-
-    return answer
-
 def solution(name):
     answer = 0
     name = list(name)

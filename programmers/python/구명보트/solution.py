@@ -1,22 +1,17 @@
-def solution(people, limit):
-    buff=[]
-    a=0
-
-    while(True):
-        p=people.pop()
-        for i in range(0,len(people)-1):
-            if p+people[i]<=limit:
-                buff.append(p+people[i])
-        if len(buff)!=0:
-            a += 1
-            people.remove(max(buff)-p)
-            buff=[]
+def solution(people,limit):
+    people.sort()
+    length=len(people)
+    light=0
+    heavy=length-1
+    count=0
+    while(light<heavy):
+        if people[light]+people[heavy]<=limit:
+            count+=1
+            light+=1
+            heavy-=1
         else:
-            a+=1
-        if len(people)<=1:
-            break
-    
-    return a+1
+            heavy-=1
+    return length-count
 
 
 print(solution([70, 50, 80, 50], 100))
