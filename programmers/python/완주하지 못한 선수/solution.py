@@ -1,5 +1,16 @@
 import collections
 
+# def solution(participant, completion):
+#     answer = ''
+
+#     for pv in participant:
+#         for cv in completion:
+#             if pv == cv:
+#                 participant.remove(cv)
+
+#     participant[0] = answer
+#     print(answer)
+#     return answer
 
 def solution(participant, completion):
     answer = ''
@@ -14,6 +25,3 @@ def solution(participant, completion):
     answer = dic[temp]
     return answer
     
-
-
-solution(["mislav", "stanko", "mislav", "ana"], ["stanko", "ana", "mislav"])
