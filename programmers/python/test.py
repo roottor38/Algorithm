@@ -1,3 +1,3 @@
 s = "aabbcc"
 
-print(len("xababcdcdababcdcd"))
+print(32%18)
