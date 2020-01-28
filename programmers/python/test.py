@@ -1,3 +1,8 @@
-s = "aabbcc"
+def solution(nums):
+    nxt=[]
+    nxt.append(0)
 
-print(32%18)
+
+    print(nxt)
+
+solution([4, 1, 2, 3])
