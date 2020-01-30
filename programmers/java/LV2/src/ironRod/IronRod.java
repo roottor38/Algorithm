@@ -14,6 +14,11 @@ public class IronRod {
         
         System.out.println(arrangement.length());
         
+        for(int i = 0; i<arrangement.length(); i++) {
+        	char str = arrangement.charAt(i);
+        	//arr.add(String to = );
+        }
+        
         System.out.println("arrangement");
         
         
