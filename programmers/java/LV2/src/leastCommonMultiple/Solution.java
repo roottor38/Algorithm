@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Solution {
 	public static int solution(int[] arr) {
 	      int answer = 0;
-	      ArrayList<Integer> result = new ArrayList<>();
 	      int index = 2;
 	      
 	      while(answer == 0) {
