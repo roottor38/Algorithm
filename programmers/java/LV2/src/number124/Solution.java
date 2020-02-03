@@ -11,7 +11,6 @@ public class Solution {
 	    	  n = n/3;
 	    	  if(tmp == 0) {
 	    		  tmp = 4;
-	    		  System.out.println(n);
 	    		  n--;
 	    	  }
 	    	  answer = tmp + answer;
