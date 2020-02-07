@@ -9,13 +9,13 @@ public class Solution {
 		String tmp = "";
 		HashMap<String, Integer> map = new HashMap<>();
 		
-		for(int i = 0; i < numbers.length; i++) {
-			tmp = "";
-			while(tmp.length() <= 4) {
-				tmp += 
-			}
-
-		}
+//		for(int i = 0; i < numbers.length; i++) {
+//			tmp = "";
+//			while(tmp.length() <= 4) {
+//				tmp += 
+//			}
+//
+//		}
 		
 
 

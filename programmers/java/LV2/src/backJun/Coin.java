@@ -1,8 +1,6 @@
 package backJun;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -30,8 +28,6 @@ public class Coin {
 	    		answer++;
 	    	}
 	    }
-	    
-	   
 		sc.close();
 		System.out.println(answer);
 	}
