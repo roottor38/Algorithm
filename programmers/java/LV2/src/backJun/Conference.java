@@ -24,18 +24,15 @@ public class Conference {
 				else return o1[1] - o2[1];
 			}
 		});
-		for (int i = 0; i < arr.length; i++) {
-			System.out.println("arr : " + arr[i][0]+ ", "+arr[i][1]);
-			
+
+		int end = arr[0][1];
+		for (int i = 0; i < arr.length-1; i++) {
+			if (end <= arr[i + 1][0]) {
+				end = arr[i + 1][1];
+				tmp++;
+			}
+
 		}
-//		int end = arr[0][1];
-//		for (int i = 0; i < arr.length-1; i++) {
-//			if (end <= arr[i + 1][0]) {
-//				end = arr[i + 1][1];
-//				tmp++;
-//			}
-//
-//		}
 
 		System.out.println(tmp);
 
