@@ -1,46 +1,45 @@
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
+import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int num = Integer.parseInt(br.readLine());
-        Integer[] input = new Integer[num];
-        int ans = 0;
-        for(int i = 0; i < num; i++){
-            input[i] = Integer.parseInt(br.readLine());
-        }
-        Arrays.sort(input);
-        int left = 0; // 0, 음수
-        int right = num -1; // 양수
+        Scanner sc = new Scanner(System.in);
+        int cn = sc.nextInt(); // 회의의 수 입력
+        int[][] arr = new int[cn][2];  // 회의 시작 및 끝시간
 
-        //0, 음수 처리
-        for (; left < right; left += 2){
-            if(input[left] < 1 && input[left+1] < 1){
-                ans += (input[left] * input[left+1]);
-            }else {
-                break;
+        // 회의 시작 및 종료 시간 입력
+        for (int i = 0; i < cn; i++) {
+            arr[i][0] = sc.nextInt();
+            arr[i][1] = sc.nextInt();
+        }
+
+        sc.close();
+
+        int tmp = 1;
+        Arrays.sort(arr, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                if(o2[1] == o1[1]) {
+                    return o1[0] -o2[0];
+                }
+                else return o1[1] - o2[1];
+            }
+        });
+
+        int end = arr[0][1];
+        for (int i = 0; i < arr.length-1; i++) {
+            if (end <= arr[i + 1][0]) {
+                end = arr[i + 1][1];
+                tmp++;
             }
         }
-        // 1을 제외한 양수 처리
-        for (; right > 0; right -= 2){
-            if(input[right] > 1 && input[right-1] > 1){
-                ans += (input[right] * input[right-1]);
-            }else {
-                break;
-            }
-        }
-        // 1을 포함한 나머지 처리
-        for (; right >= left; right--) {
-            ans += input[right];
-        }
 
-        System.out.println(ans);
-
+        System.out.println(tmp);
 
     }
 
-}
+
+    }
