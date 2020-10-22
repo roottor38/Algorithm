@@ -1,4 +1,4 @@
-package solution;
+package study;
 
 public class bubbleSort {
     public void sort(int[] arr){
